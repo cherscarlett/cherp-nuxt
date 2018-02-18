@@ -1,0 +1,9 @@
+@mixin background {
+  background: transparent url('images/bg.svg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@mixin typeface($name) {
+  font-family: '#{unquote($name)}', map-get($fonts, $name);
+}
