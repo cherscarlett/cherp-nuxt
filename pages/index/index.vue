@@ -3,10 +3,12 @@
 
 <script>
   import Cat from '~/components/Cat/Cat.vue'
+  import Intro from '~/components/Intro/Intro.vue'
 
   export default {
     components: {
-      Cat
+      Cat,
+      Intro
     }
   }
 </script>

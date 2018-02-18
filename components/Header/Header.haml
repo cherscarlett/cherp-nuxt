@@ -9,4 +9,4 @@
             %stop{ 'offset': '0.0990013', 'stop-color': 'lightblue', 'stop-opacity': '.5' }
               %animate{ 'attributeName': 'stop-color', 'values': 'lightblue;orange;purple;purple;black;purple;purple;blue;lightblue', 'dur': '14s', 'repeatCount': 'indefinite' }
               %animate{ 'attributeName': 'offset', 'values': '.95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95', 'dur': '14s', 'repeatCount': 'indefinite' }
-          %text{ 'x': '50%', 'y': '50%', 'dy': '25%', 'fill': 'url(#gradient)' } {{ $store.state.name }}
+        %text.heading{ 'x': '50%', 'y': '50%', 'dy': '25%', 'fill': 'url(#gradient)' } {{ $store.state.name }}
