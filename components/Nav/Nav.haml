@@ -1,0 +1,7 @@
+%nav
+  %ul
+    %li
+      %h1
+        %Logo
+    %li{ 'v-for': 'link in links', ':key': 'link.name' }
+      %NavLink{ ':link': 'link' }

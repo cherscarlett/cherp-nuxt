@@ -1,8 +1,10 @@
-.home {
-  text-align: center;
-  
-  .cat  {
-      width: 100%;
-      padding-top: 100px;
+#index {
+  > div {
+    text-align: center;
   }
+}
+
+.cat  {
+    width: 100%;
+    padding-top: 100px;
 }

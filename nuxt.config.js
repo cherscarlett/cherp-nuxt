@@ -13,6 +13,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
+  loading: {
+    height: '5px',
+    color: 'transparent'
+  },
   /*
   ** Build configuration
   */
@@ -20,6 +24,11 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    scss: [
+      require('autoprefixer')({
+        browsers: ['> 5%']
+      })
+    ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
