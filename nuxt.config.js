@@ -21,7 +21,14 @@ module.exports = {
         content: 'Personal website of Cher Scarlett.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Raleway:400,500i,800|Playfair+Display:400i'
+      }
+    ]
   },
   loading: {
     height: '5px',
