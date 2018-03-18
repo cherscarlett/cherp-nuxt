@@ -1,3 +1,5 @@
+@import '../../assets/scss/lib/_common';
+
 .byline {
   font-size: .8em;
   opacity: .3;
@@ -9,5 +11,6 @@ address {
 
 time {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
+  @include typeface('Playfair Display');
 }
