@@ -1,0 +1,6 @@
+%div
+  %blockquote.twitter-video{ 'data-lang': 'en' }
+    %p{ lang: 'und', dir: 'ltr' }
+      %a{ ':href': '"https://t.co/" + videoId' } pic.twitter.com/{{ videoId }}
+    %a{ ':href': 'url + "?ref_src=twsrc%5Etfw"' } {{ videoId }}
+  %script{ async: true, src: "https://platform.twitter.com/widgets.js", charset: "utf-8" }

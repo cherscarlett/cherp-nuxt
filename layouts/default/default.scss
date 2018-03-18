@@ -5,13 +5,13 @@ body {
   @include typeface('Raleway');
 }
 
-h1 {
+h1, h3 {
   @include typeface('Noelan');
 }
 
 .nuxt-progress {
   top: 51px;
-  background-image: linear-gradient(to right, #fc00ff, #00dbde, #00c9ff, #92fe9d);
+  background-image: var(--gradient);
 }
 
 a {
@@ -24,9 +24,75 @@ a:hover {
   text-decoration: underline;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+
+  > footer {
+    justify-self: flex-end;
+    margin-top: auto;
+  }
+
+  .v--modal-overlay {
+    background-color: rgba(0, 0, 0, .75);
+  }
+
+  .v--modal {
+    margin: auto;
+    left: auto!important;
+    &, .lightbox, .image {
+      transition: width 300ms, height 300ms;
+    }
+    &:not(.v--modal-lightbox):not(.v--modal-instagram) {
+      display: flex;
+      align-items: center;
+      width: 75vw!important;
+      justify-content: center;
+    }
+    &-lightbox {
+      top: 50%!important;
+      left: 50%!important;
+      overflow: visible;
+      @include center(absolute, top, left);
+    }
+    &-dark {
+      background-color: rgba(0, 0, 0, 1);
+    }
+    &-instagram {
+      display: flex;
+      justify-content: center;
+      width: 75vh!important;
+    }
+  }
+}
+
 .contents {
   padding: 50px 0;
-  margin: auto;
+  margin: 0 auto;
   width: 95vw;
   max-width: 1024px;
+}
+
+h1.article-title {
+  @include typeface('Raleway');
+}
+
+i, em {
+  font-style: italic;
+  font-weight: 500;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
 }

@@ -1,9 +1,7 @@
 footer {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  height: 50px;
+  height: 75px;
   width: 100vw;
+  text-align: center;
 }
 
 .external {
@@ -12,4 +10,10 @@ footer {
   li {
     padding: 0 6px;
   }
+}
+
+small {
+  line-height: 50px;
+  font-size: .7em;
+  opacity: .4;
 }

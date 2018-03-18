@@ -1,0 +1,5 @@
+.lightbox
+  %transition{ 'name': 'fade'}
+    %Loader{ 'v-if': 'loading' }
+  .image
+    %img{ 'v-lazy': 'image', alt: '' }

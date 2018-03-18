@@ -1,0 +1,119 @@
+@import '../../assets/scss/lib/_variables';
+@import '../../assets/scss/lib/_common';
+
+dl {
+  position: relative;
+  overflow: hidden;
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 50px;
+  }
+  &[data-has-photo] {
+    &:before {
+      padding-top: 100%;
+    }
+  }
+  &:after {
+    content: '';
+    background-image: var(--gradient);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .2;
+  }
+}
+
+dt {
+  margin-right: auto;
+  @include typeface('Noelan');
+  font-size: 1.3em;
+  span {
+    display: block;
+    @include typeface('Playfair Display');
+    font-style: italic;
+    opacity: .4;
+    font-size: .6em;
+  }
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+li[data-scientific] {
+  @include typeface('Playfair Display');
+  font-size: .8em;
+  font-style: italic;
+  opacity: .4;
+  text-align: right;
+}
+
+li[data-is-photo] {
+  overflow: hidden;
+  position: absolute;
+  top: calc(50px + 1%);
+  width: 99%;
+  height: calc(99% - 50px);
+  left: 1%;
+  @include vignette;
+}
+
+li {
+  &[data-classification] {
+    @supports not (mix-blend-mode: color-burn) {
+      display: none;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(50px + 1%);
+    width: calc(50px + 1%);
+    text-indent: -10000px;
+    mix-blend-mode: hard-light;
+    z-index: -1;
+    opacity: .3;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+}
+
+time {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(1% + 5px);
+  text-align: right;
+  right: calc(1% + 10px);
+  mix-blend-mode: screen;
+  opacity: .7;
+  color: rgba(255, 255, 255, .7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, .99);
+  font-size: .8em;
+  &:before {
+    content: '🎂';
+    vertical-align: middle;
+    font-size: 1.2em;
+  }
+}
+
+img {
+  width: 99%;
+  height: 99%;
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
+  &[lazy^='loading'], &[lazy^='error'] {
+    background-size: auto;
+    object-fit: none;
+    object-position: center;
+  }
+}

@@ -1,0 +1,8 @@
+%article
+  %header
+    .byline
+      %address{ class: 'org', ':style': 'styles' } {{ article.publisher }}
+      %time{ ':datetime': 'article.date', pubdate: true } {{ article.date | moment('MMMM Do, YYYY') }}
+  .thumbnail{ 'v-lazy:background-image': 'article.thumbnail' }
+    %img{ ':src': 'article.thumbnail', ':alt': 'article.date | moment("dddd, MMMM Do, YYYY")' }
+  %button View photo

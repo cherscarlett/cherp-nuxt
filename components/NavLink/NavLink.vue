@@ -3,13 +3,6 @@
 
 <script>
   export default {
-    props: ['link'],
-    computed: {
-      styles () {
-        return {
-          backgroundImage: 'url(' + this.link.name + '.svg)'
-        }
-      }
-    }
+    props: ['link']
   }
 </script>

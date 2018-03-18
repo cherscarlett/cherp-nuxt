@@ -1,0 +1,7 @@
+%section{ ':style': 'styles' }
+  %header
+    %h3 {{ column.title }}
+  %ul{ ':data-type': 'column.type' }
+    %li{ 'v-for': 'article in column.articles' }
+      %a{ ':href': 'article.url', ':data-type': 'column.type' }
+        %component{ ':is': 'column.type', ':article': 'article' }

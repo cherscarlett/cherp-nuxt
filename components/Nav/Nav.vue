@@ -14,7 +14,7 @@
       this.$router.options.routes.forEach(route => {
         if (route.path !== '/') {
           this.links.push({
-            name: route.name,
+            name: route.name.replace('-', ' '),
             path: route.path
           })
         }

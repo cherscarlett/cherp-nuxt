@@ -1,11 +1,13 @@
+@import '../../assets/scss/lib/_variables';
+
 a {
   opacity: .4;
-  transition: all 600ms ease-in-out;
+  transition: var(--transition);
   text-transform: uppercase;
   position: relative;
   &:after {
     content: '';
-    transition: all 600ms ease-in-out;
+    transition: var(--transition);
     display: block;
     position: absolute;
     left: 0;
@@ -13,7 +15,7 @@ a {
     margin-bottom: -16px;
     width: 0;
     height: 2px;
-    background-image: linear-gradient(to right, #fc00ff, #00dbde, #00c9ff, #92fe9d);
+    background-image: var(--gradient);
     opacity: 0;
   }
   &:hover {

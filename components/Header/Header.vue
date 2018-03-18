@@ -3,10 +3,17 @@
 
 <script>
   import Nav from '~/components/Nav/Nav.vue'
+  import FixedHeader from 'vue-fixed-header'
 
   export default {
     components: {
-      Nav
+      Nav,
+      FixedHeader
+    },
+    data () {
+      return {
+        isFixed: false
+      }
     }
   }
 </script>

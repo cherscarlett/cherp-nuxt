@@ -1,3 +1,5 @@
+@import '../../assets/scss/lib/_variables';
+
 a {
   height: 20px;
   width: 20px;
@@ -5,7 +7,7 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   filter: grayscale(100%) brightness(1.05);
-  transition: all 600ms ease-in-out;
+  transition: var(--transition);
   text-indent: -10000px;
   display: inline-block;
   &:hover {

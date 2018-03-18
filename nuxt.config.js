@@ -1,17 +1,27 @@
+require('dotenv').config()
+
 module.exports = {
-  /*
-  ** Headers of the page
-  */
+  env: {
+    twitchClientId: process.env.TWITCH_CLIENT_ID || 'failed',
+    youTubeClientId: process.env.YOUTUBE_CLIENT_ID || 'failed'
+  },
+  plugins: [
+    '~/plugins/vue-moment',
+    '~/plugins/vue-lazy-load',
+    '~/plugins/vue-modal'
+  ],
   head: {
     title: 'Cher Scarlett || Code Hitchhiker',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Personal website of Cher Scarlett.' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Personal website of Cher Scarlett.'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },
   loading: {
     height: '5px',
@@ -29,7 +39,7 @@ module.exports = {
         browsers: ['> 5%']
       })
     ],
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
