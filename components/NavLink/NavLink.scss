@@ -1,0 +1,41 @@
+@import '../../assets/scss/lib/_variables';
+
+a {
+  opacity: .4;
+  transition: var(--transition);
+  text-transform: uppercase;
+  position: relative;
+  &:after {
+    content: '';
+    transition: var(--transition);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -16px;
+    width: 0;
+    height: 2px;
+    background-image: var(--gradient);
+    opacity: 0;
+  }
+  &:hover {
+    opacity: .9;
+    text-decoration: none;
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  &:active, &:focus {
+    &:after {
+      opacity: 0;
+    }
+  }
+  &.nuxt-link-active {
+    opacity: 1;
+    cursor: default;
+    &:after {
+      content: none;
+    }
+  }
+}

@@ -1,4 +1,6 @@
-%article
+%article.body
   %Header
-  %nuxt
+  %section.contents{ ':id': '$nuxt.$route.name' }
+    %nuxt
   %Footer
+  %modals-container

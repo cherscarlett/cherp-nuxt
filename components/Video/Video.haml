@@ -1,0 +1,8 @@
+%article
+  %header
+    %h1.article-title {{ article.title }}
+    .byline
+      %address{ class: 'org', ':style': 'styles', 'v-show': 'thumbnailLoaded' } {{ article.platform }}
+      %time{ ':datetime': 'article.date', pubdate: true } {{ article.date | moment('MMMM Do, YYYY') }}
+  .thumbnail{ ':v-if': 'thumbnailAwait', 'v-lazy:background-image': 'this.article.thumbnail ? this.article.thumbnail : thumbnail' }
+  %button Play video

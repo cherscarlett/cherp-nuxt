@@ -1,3 +1,10 @@
+$fonts: (
+  'Raleway': sans-serif,
+  'Jaapokki Subtract': sans-serif,
+  'Noelan': cursive,
+  'Playfair Display': serif
+);
+
 @mixin background {
   background: transparent url('images/bg.svg');
   background-size: cover;
@@ -6,4 +13,39 @@
 
 @mixin typeface($name) {
   font-family: '#{unquote($name)}', map-get($fonts, $name);
+}
+
+@mixin center($position, $sides...) {
+    position: $position;
+
+
+    $x: 0;
+    $y: 0;
+
+    @each $side in $sides {
+        @if $side == top {
+            $y: -50%;
+        }
+        @if $side == left {
+            $x: -50%;
+        }
+
+        #{$side}: 50%;
+    }
+
+    transform: translate3d($x, $y, 0);
+}
+
+
+@mixin vignette {
+  &:after {
+    content: '';
+    background: var(--vignette);
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: 1%;
+    bottom: 1%;
+    left: 0;
+  }
 }

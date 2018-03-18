@@ -1,14 +1,17 @@
 @charset "UTF-8";
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500i,800|Playfair+Display:400i);
 
 @font-face {
   font-family: 'Jaapokki Subtract';
-  src: url(~/assets/fonts/Jaapokki/subtract/web/jaapokkisubtract-regular.woff) format("woff");
+  src: url(~/assets/fonts/Jaapokki/subtract/web/jaapokkisubtract-regular.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-$fonts: (
-  Raleway: sans-serif
-);
+@font-face {
+  font-family: 'Noelan';
+  src: url(~/assets/fonts/Noelan/noelan_script-webfont.woff2) format('woff2') url(~/assets/fonts/Noelan/noelan_script-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,4 @@
+%section
+  .animals
+    %Animal{ 'v-for': 'animal in animals', ':animal': 'animal', ':key': 'animal.name' }
+  %Page{ ':columns': 'columns', ':title': '$nuxt.$route.name' }

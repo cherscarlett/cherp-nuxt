@@ -1,0 +1,69 @@
+article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 110px;
+  width: 110px;
+}
+
+time {
+  display: none;
+}
+
+.thumbnail {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+  filter: contrast(150%) brightness(100%) saturate(50%) hue-rotate(-25deg);
+  &[lazy^='loading'], &[lazy^='error'] {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: rgba(255, 255, 255, .3);
+    opacity: 1;
+  }
+  img {
+    height: 0;
+    width: 0;
+  }
+}
+
+address {
+  text-indent: -10000px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  margin: auto;
+  opacity: .4;
+  z-index: 2;
+}
+
+button {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-indent: -10000px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
