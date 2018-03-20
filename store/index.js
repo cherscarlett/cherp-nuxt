@@ -109,7 +109,7 @@ const createStore = () => {
           name: 'Mikasa',
           class: 'Fish',
           type: 'Betta',
-          species: 'Koi Veiltail',
+          species: 'Koi Veiltail Betta',
           scientific: 'Betta splendens',
           birthday: '2017-11-01T00:00:00',
           sex: 'female'
@@ -118,7 +118,7 @@ const createStore = () => {
           name: 'Yeager',
           class: 'Fish',
           type: 'Betta',
-          species: 'Marble Doubletail',
+          species: 'Marble Doubletail Betta',
           scientific: 'Betta splendens',
           birthday: '2017-10-01T00:00:00',
           sex: 'male'
@@ -238,6 +238,13 @@ const createStore = () => {
                 date: '2018-02-24T00:00:00',
                 url:
                   'https://medium.com/@cherp/the-spec-simply-says-that-the-pointer-cursor-is-for-links-577bb8f831d7',
+                publication: 'Medium'
+              },
+              {
+                title: 'Const is fucking useful',
+                date: '2018-03-20T00:00:00',
+                url:
+                  'https://medium.com/@cherp/const-is-fucking-useful-8f2b4e6652ea',
                 publication: 'Medium'
               }
             ]

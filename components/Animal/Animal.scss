@@ -1,7 +1,7 @@
 @import '../../assets/scss/lib/_variables';
 @import '../../assets/scss/lib/_common';
 
-dl {
+article {
   position: relative;
   overflow: hidden;
   padding: 1%;
@@ -30,9 +30,8 @@ dl {
   }
 }
 
-dt {
+h1 {
   margin-right: auto;
-  @include typeface('Noelan');
   font-size: 1.3em;
   span {
     display: block;
@@ -43,14 +42,22 @@ dt {
   }
 }
 
-ul {
+dl {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   flex-direction: column;
 }
 
-li[data-scientific] {
+dt {
+  display: none;
+}
+
+dd {
+  font-size: .9em;
+}
+
+dd[data-scientific] {
   @include typeface('Playfair Display');
   font-size: .8em;
   font-style: italic;
@@ -58,7 +65,7 @@ li[data-scientific] {
   text-align: right;
 }
 
-li[data-is-photo] {
+dd[data-is-photo] {
   overflow: hidden;
   position: absolute;
   top: calc(50px + 1%);
@@ -68,7 +75,7 @@ li[data-is-photo] {
   @include vignette;
 }
 
-li {
+dd {
   &[data-classification] {
     @supports not (mix-blend-mode: color-burn) {
       display: none;

@@ -1,13 +1,17 @@
-%dl{ ':data-has-photo': 'hasPhoto' }
-  %dt
+%article{ ':data-has-photo': 'hasPhoto' }
+  %h1
     = '{{ animal.name }}'
     %span{ 'v-if': 'animal.nickname' } {{ animal.nickname }}
-  %dd
-    %ul
-      %li{ ':data-classification': 'classification', ':style' : 'styles', ':data-sex': 'animal.sex' } {{ classification }}
-      %li {{ animal.species || animal.breed }}
-      %li{ 'data-scientific': 'true' } {{ animal.scientific }}
-      %li
-        %time{ ':datetime': 'animal.birthday' } {{ animal.birthday | moment('from', true) }} old
-      %li{ 'v-if': 'animal.photo' , ':data-is-photo': 'hasPhoto' }
-        %img{ 'v-lazy': 'animal.photo', ':alt': '"Photo of " + animal.name' }
+  %dl
+    %dt Classification
+    %dd{ ':data-classification': 'classification', ':style' : 'styles', ':data-sex': 'animal.sex' } {{ classification }}
+    %dt {{ animal.species ? 'Species' : 'Breed' }}
+    %dd {{ animal.species || animal.breed }}
+    %dt Scientific Name
+    %dd{ 'data-scientific': 'true' } {{ animal.scientific }}
+    %dt Birthdate
+    %dd
+      %time{ ':datetime': 'animal.birthday' } {{ animal.birthday | moment('from', true) }} old
+    %dt{ 'v-if': 'animal.photo' } Photo
+    %dd{ 'v-if': 'animal.photo', ':data-is-photo': 'hasPhoto' }
+      %img{ 'v-lazy': 'animal.photo', ':alt': '"Photo of " + animal.name' }
