@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Noelan';
-  src: url(/fonts/Noelan/noelan_script-webfont.woff2) format('woff2')
+  src: url(/fonts/Noelan/noelan_script-webfont.woff2) format('woff2'),
     url(/fonts/Noelan/noelan_script-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
