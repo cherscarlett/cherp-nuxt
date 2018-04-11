@@ -12,7 +12,7 @@ $fonts: (
 }
 
 @mixin typeface($name) {
-  font-family: quote(unquote($name)), #{map-get($fonts, $name)};
+  font-family: "'#{unquote($name)}', #{map-get($fonts, $name)}";
 }
 
 @mixin center($position, $sides...) {
